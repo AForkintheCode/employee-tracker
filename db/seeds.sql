@@ -17,8 +17,8 @@ VALUES (1, "IT Analyst I", 70000, 3 ),
 
 -- employees
 INSERT INTO employees (id, first_name, last_name, role_id, manager_id)
-VALUES (42, Thomas, Anderson, 6, 2),
-       (24, John, Smith, 6, 2),        
-       (11, Takeshi, Kovacs, 3, 5),
-       (22, Kristen, Ortega, 5, 4);
+VALUES (42, "Thomas", "Anderson", 6, 2),
+       (24, "John", "Smith", 6, 2),        
+       (11, "Takeshi", "Kovacs", 3, 5),
+       (22, "Kristen", "Ortega", 5, 4);
 

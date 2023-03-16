@@ -9,8 +9,8 @@ CREATE TABLE departments(
 );
 
 CREATE TABLE roles(
-    id INT,
-    title VARCHAR(30) PRIMARY KEY,
+    id INT PRIMARY KEY,
+    title VARCHAR(30),
     salary DECIMAL,
     department_id  INT NOT NULL,
     CONSTRAINT fk_departmentOrder FOREIGN KEY(department_id)
@@ -22,7 +22,7 @@ CREATE TABLE employees(
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT NOT NULL,
-    manager_id INT,
+    manager_id INT,    
     CONSTRAINT fk_roleOrder FOREIGN KEY(role_id)
     REFERENCES roles(id)
 );

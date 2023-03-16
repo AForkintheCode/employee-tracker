@@ -1,14 +1,14 @@
 -- department + role tables
-SELECT (stuff here)
-FROM department
+SELECT department_name
+FROM departments
 LEFT JOIN role
-ON department.id = role.department_id
-ORDER BY department.name
+ON departments.id = roles.department_id
+ORDER BY departments.name
 
 
 -- role + employee tables
-SELECT (stuff here)
-FROM role
-LEFT JOIN employee
-ON role.id = employee.role_id
+SELECT title
+FROM roles
+LEFT JOIN employees
+ON roles.id = employees.role_id
 ORDER BY department.name
