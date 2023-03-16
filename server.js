@@ -55,13 +55,14 @@ inquirer
             option.call()
         }
         if (data.selection === 'Quit'){     
-               
-
+            return;             
         }
     })}
 
 function rundb(){
     mainmenu();
+    
+    
     }
 
         
