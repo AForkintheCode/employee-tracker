@@ -2,10 +2,6 @@ const inquirer = require('inquirer')
 const { viewDepartment, viewRole, viewEmployee, addRole, addEmployee, updateEmployee } = require('./lib/menu.js')
 
 
-
-//container
-
-
 //main prompt
 async function mainMenu() {
 
@@ -23,43 +19,54 @@ async function mainMenu() {
         if (data.selection === 'View Departments') {
             option = new viewDepartment;
             option.setOption(data.selection)
-            option.call();
+            option.call(); 
+            return mainMenu();          
         }
 
         if (data.selection === 'View Roles') {
             option = new viewRole;
             option.setOption(data.selection)
             option.call()
+            return mainMenu();         
         }
 
         if (data.selection === 'View Employees') {
             option = new viewEmployee;
             option.setOption(data.selection)
             option.call()
+            return mainMenu();
+            
         }
 
         if (data.selection === 'Add Role') {
             option = new addRole;
             option.setOption(data.selection)
             option.call()
+            return mainMenu();
+            
         }
 
         if (data.selection === 'Add Employee') {
             option = new addEmployee;
             option.setOption(data.selection)
             option.call()
+            return mainMenu();
+            
         }
 
         if (data.selection === 'Update Employee Status') {
             option = new updateEmployee;
             option.setOption(data.selection)
             option.call()
+            return mainMenu();
+            
         }
 
         if (data.selection === 'Quit'){
             return;
         }
-
+        
+        
     }
 
 
